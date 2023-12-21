@@ -2,10 +2,14 @@
   "name": "create-npm-suite",
   "version": "0.0.1",
   "type": "module",
+  "bin": "index.js",
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "rimraf": "latest",
+    "tsup": "latest",
+    "typescript": "latest"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "scripts": {
+    "build": "rimraf index.js && tsup"
   }
 }
