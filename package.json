@@ -1,15 +1,16 @@
 {
-    "name": "create-npm-suite",
-    "version": "0.0.1",
+    "name": "create-npm-suite-test",
+    "version": "0.0.2",
     "type": "module",
     "bin": "index.js",
     "devDependencies": {
-        "@changesets/cli": "latest",
-        "bun-types": "latest",
-        "prettier": "latest",
-        "rimraf": "latest",
-        "tsup": "latest",
-        "typescript": "latest"
+        "@types/inquirer": "^9.0.0",
+        "bun-types": "^1.0.0",
+        "inquirer": "^9.0.0",
+        "prettier": "^3.0.0",
+        "rimraf": "^5.0.0",
+        "tsup": "^8.0.0",
+        "typescript": "^5.0.0"
     },
     "scripts": {
         "build": "rimraf index.js && tsup",
