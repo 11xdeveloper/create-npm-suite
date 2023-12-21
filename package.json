@@ -1,15 +1,21 @@
 {
-  "name": "create-npm-suite",
-  "version": "0.0.1",
-  "type": "module",
-  "bin": "index.js",
-  "devDependencies": {
-    "bun-types": "latest",
-    "rimraf": "latest",
-    "tsup": "latest",
-    "typescript": "latest"
-  },
-  "scripts": {
-    "build": "rimraf index.js && tsup"
-  }
+    "name": "create-npm-suite",
+    "version": "0.0.1",
+    "type": "module",
+    "bin": "index.js",
+    "devDependencies": {
+        "@changesets/cli": "latest",
+        "bun-types": "latest",
+        "prettier": "latest",
+        "rimraf": "latest",
+        "tsup": "latest",
+        "typescript": "latest"
+    },
+    "scripts": {
+        "build": "rimraf index.js && tsup",
+        "changes": "changeset",
+        "format": "prettier --write .",
+        "lint": "tsc --noEmit",
+        "clean": "bun run lint && bun run format"
+    }
 }
