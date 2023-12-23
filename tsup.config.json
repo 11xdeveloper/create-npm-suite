@@ -1,5 +1,6 @@
 {
-  "entry": ["index.ts"],
-  "outDir": ".",
-  "format": ["esm"]
+    "entry": ["src"],
+    "format": "esm",
+    "minify": true,
+    "outDir": "dist"
 }

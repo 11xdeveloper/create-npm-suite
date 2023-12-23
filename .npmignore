@@ -1,6 +1,0 @@
-node_modules
-.gitignore
-bun.lockb
-index.ts
-tsconfig.json
-tsup.config.json
