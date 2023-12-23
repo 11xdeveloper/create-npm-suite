@@ -1,6 +1,7 @@
 {
-    "entry": ["src", "!src/**/*.test.*"],
-    "outDir": "dist",
+    "entry": ["src"],
     "format": ["cjs", "esm"],
+    "minify": true,
+    "outDir": "dist",
     "dts": true
 }
