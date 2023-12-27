@@ -1,6 +1,6 @@
 {
     "name": "create-npm-suite",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "type": "module",
     "bin": {
         "create-npm-suite": "./dist/index.js"
@@ -35,5 +35,21 @@
         "dist/*",
         "template",
         "README.md"
-    ]
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/11xdeveloper/create-npm-suite.git"
+    },
+    "homepage": "https://github.com/11xdeveloper/create-npm-suite#readme",
+    "bugs": {
+        "url": "https://github.com/11xdeveloper/create-npm-suite/issues"
+    },
+    "keywords": [
+        "project-scaffolder"
+    ],
+    "author": {
+        "name": "Dawood Sulaiman Syed",
+        "email": "neighborhood10xdeveloper@gmail.com",
+        "url": "https://github.com/11xdeveloper"
+    }
 }
