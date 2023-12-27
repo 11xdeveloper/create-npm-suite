@@ -141,3 +141,29 @@ jobs:
                   GITHUB_TOKEN: ${'${{ secrets.GITHUB_TOKEN }}'}
                   NPM_TOKEN: ${'${{ secrets.NPM_TOKEN }}'}
 `;
+
+export const tsconfigjson = `
+{
+    "compilerOptions": {
+        "lib": ["ESNext"],
+        "module": "ESNext",
+        "target": "ESNext",
+        "moduleResolution": "${packageManager === 'bun' ? 'Bundler' : 'Node'}",
+        "moduleDetection": "force",
+        "noEmit": true,
+        "composite": true,
+        "strict": true,
+        "downlevelIteration": true,
+        "skipLibCheck": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,${
+            packageManager === 'bun'
+                ? `        
+        "types": ["bun-types"],
+        "allowImportingTsExtensions": true,`
+                : ''
+        }
+        "allowJs": true
+    }
+}
+`;

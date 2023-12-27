@@ -14,7 +14,8 @@ import {
     mainyaml,
     packageManager,
     packagejson,
-    publishyaml
+    publishyaml,
+    tsconfigjson
 } from './constants';
 import { copy, write } from './utils';
 import chalk from 'chalk';
@@ -115,6 +116,7 @@ if (override) rm(target, { recursive: true });
 
 copy(template, target);
 write(joinPaths(target, 'package.json'), packagejson(name, repositoryURL));
+write(joinPaths(target, 'tsconfig.json'), tsconfigjson);
 write(joinPaths(target, 'src', 'sum', 'index.test.ts'), indextestts);
 write(joinPaths(target, '.github', 'workflows', 'main.yaml'), mainyaml);
 write(joinPaths(target, '.github', 'workflows', 'publish.yaml'), publishyaml);
